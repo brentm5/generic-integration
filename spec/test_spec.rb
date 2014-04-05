@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe 'adding a new customer', :type => :feature do
-  it 'should be able to create a new customer' do
+describe 'a simple server', :type => :feature do
+  it 'should return success' do
     visit '/'
-    page.body.should have_content 'status'
+    expect(status_code).to eql 200
   end
 end
